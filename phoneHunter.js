@@ -14,7 +14,7 @@ const displayPhone = data => {
         phoneDiv.classList.add('col');
 
         phoneDiv.innerHTML = `
-        <div class="card p-5">
+        <div class="card p-5 border border-2 border-dark">
             <img src="${phone.image}" class="card-img-top" alt="...">
             <div class="card-body">
             <h5 class="card-title">${phone.phone_name}</h5>
