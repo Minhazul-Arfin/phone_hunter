@@ -9,17 +9,23 @@
         integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
 </head>
 
-<body class="mx-5" style="background-color: #f1f5f9;">
-    <header>
+<body  style="background-color: #f1f5f9;">
+    <header class="pt-4" style="font-family: Lucida Console">
         <h1 class="fw-bold text-center">Welcome To Phone Hunter</h1>
     </header>
 
-    <main>
+    <main class="mx-5 mt-5">
         <!-- search -->
-        <div class="mb-3">
-            <label class="form-label fs-4 text-center">Search Your Phone Here!</label>
-            <input id="inputSearchText" class="form-control w-25" placeholder="Ex: Samsung"><br>
-            <button id="btn-search" class="btn btn-secondary">Search</button>
+        <div class="mb-3 d-flex flex-column align-items-center justify-content-center border border-3 rounded" style="height: 200px; background-color: #f5f5f5;">
+            <div>
+                <label class="form-label fs-4 text-center" style="font-family: Arial">Search Your Phone Here!</label>
+            </div>
+            <div>
+                <input id="inputSearchText" class="form-control" style="width: 20rem;" placeholder="Ex: Samsung"><br>
+            </div>
+            <div>
+                <button id="btn-search" class="btn btn-secondary">Search</button>
+            </div>    
         </div>
 
         <!-- card body -->
@@ -27,7 +33,7 @@
             <!--data appending here-  -->
         </div>
 
-        
+
         <!-- Modal -->
         <div class="modal fade" id="detailsModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-scrollable">
@@ -37,15 +43,19 @@
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div id="modalBody" class="modal-body">
-                        
+
                     </div>
                     <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                     </div>
                 </div>
             </div>
         </div>
 
+        <!-- No result found -->
+        <div id="no-result-found-msg" class="d-none">
+            <p class="fs-2 text-center font-weight-bold text-danger pt-5"> No Result Found!<br>Please Try Again....</p>
+        </div>
     </main>
 
 

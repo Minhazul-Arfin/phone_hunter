@@ -10,6 +10,15 @@ const displayPhone = data => {
     const phoneContainer = document.getElementById('phone-container');
     phoneContainer.innerHTML = ``;
 
+    // if no data found, show msg
+    if(data.length === 0){
+        document.getElementById('no-result-found-msg').classList.remove('d-none');
+    }
+    else{
+        document.getElementById('no-result-found-msg').classList.add('d-none');
+    }
+
+    // displaying data
     data.forEach(phone =>{
         const phoneDiv = document.createElement('div');
         phoneDiv.classList.add('col');
