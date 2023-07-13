@@ -20,11 +20,30 @@
             <label class="form-label fs-4 text-center">Search Your Phone Here!</label>
             <input id="inputSearchText" class="form-control w-25" placeholder="Ex: Samsung"><br>
             <button id="btn-search" class="btn btn-secondary">Search</button>
-          </div>
+        </div>
 
         <!-- card body -->
         <div id="phone-container" class="row row-cols-1 row-cols-md-3 g-4">
             <!--data appending here-  -->
+        </div>
+
+        
+        <!-- Modal -->
+        <div class="modal fade" id="detailsModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-scrollable">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 id="modalTitle" class="modal-title" id="exampleModalLabel">Modal title</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div id="modalBody" class="modal-body">
+                        
+                    </div>
+                    <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
         </div>
 
     </main>
