@@ -15,14 +15,14 @@ const displayPhone = data => {
         phoneDiv.classList.add('col');
         
         phoneDiv.innerHTML = `
-        <div class="card p-5 border border-2 border-dark">
+        <div class="card p-5 border border-2 border-dark" style="background-color: #e2e8f0">
             <img src="${phone.image}" class="card-img-top" alt="...">
             <div class="card-body">
             <h5 class="card-title">${phone.phone_name}</h5>
             <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
                 additional content. This content is a little bit longer.</p>
             </div>
-            <button onclick="loadDetails('${phone.slug}')" id="btn-details" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#detailsModal">Show Details</button>
+            <button onclick="loadDetails('${phone.slug}')" id="btn-details" class="btn btn-primary fw-semibold" data-bs-toggle="modal" data-bs-target="#detailsModal" style="background-color: #fb7185; border: none;">Show Details</button>
         </div>
         `;
         phoneContainer.appendChild(phoneDiv);
