@@ -8,6 +8,7 @@ const loadData = () => {
 const displayPhone = data => {
     console.log(data);
     const phoneContainer = document.getElementById('phone-container');
+    phoneContainer.innerHTML = ``;
 
     data.forEach(phone =>{
         const phoneDiv = document.createElement('div');
@@ -26,6 +27,26 @@ const displayPhone = data => {
         phoneContainer.appendChild(phoneDiv);
 
     });
+}
+
+
+document.getElementById('btn-search').addEventListener('click', function(){
+    // console.log("search button pressed")
+    const searchText = document.getElementById('inputSearchText');
+   console.log(searchText.value)
+    loadSearchData(searchText.value)
+})
+
+const loadSearchData = searchText =>{
+    const url = `https://openapi.programming-hero.com/api/phones?search=${searchText}`;
+    
+    fetch(url)
+    .then(res => res.json())
+    .then(data => displayPhone(data.data))
+}
+
+const displaySearchValue = data =>{
+
 }
 
 
