@@ -10,8 +10,10 @@ const displayPhone = data => {
     const phoneContainer = document.getElementById('phone-container');
     phoneContainer.innerHTML = ``;
 
+    
     // if no data found, show msg
     if(data.length === 0){
+        toggleLoader(true);
         document.getElementById('no-result-found-msg').classList.remove('d-none');
     }
     else{
@@ -35,13 +37,14 @@ const displayPhone = data => {
         </div>
         `;
         phoneContainer.appendChild(phoneDiv);
-
     });
+    toggleLoader(false);
 }
 
 
 document.getElementById('btn-search').addEventListener('click', function(){
     // console.log("search button pressed")
+    toggleLoader(true);
     const searchText = document.getElementById('inputSearchText');
     // console.log(searchText.value)
     loadSearchData(searchText.value)
@@ -79,6 +82,16 @@ const loadModal = data =>{
     `;
 }
 
+
+// LOADER
+const toggleLoader = isLoading =>{
+    if(isLoading){
+        document.getElementById('loader').classList.remove('d-none');
+    }
+    else{
+        document.getElementById('loader').classList.add('d-none');
+    }
+}
 
 
 loadData();
