@@ -47,7 +47,8 @@ document.getElementById('btn-search').addEventListener('click', function(){
     toggleLoader(true);
     const searchText = document.getElementById('inputSearchText');
     // console.log(searchText.value)
-    loadSearchData(searchText.value)
+    loadSearchData(searchText.value);
+    searchText.value = '';
 })
 
 const loadSearchData = searchText =>{
